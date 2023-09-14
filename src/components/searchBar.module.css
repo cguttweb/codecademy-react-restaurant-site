@@ -1,12 +1,29 @@
 .filterNav {
   border-bottom: 1px solid #ffffff;
   display: flex;
-  justify-content: space-between;
+  justify-content: space-around;
   list-style: none;
   padding-bottom: 0.5rem;
   padding-left: 0;
 }
 
+.filterNav a {
+  color: #ffffff;
+}
+
+.filterNav a:hover {
+  color: #ffffff;
+  text-decoration: underline;
+}
+
+/* Search styles */
+
+form {
+  display: flex;
+  justify-content: space-between;
+}
+
 .search {
   padding: 0.5rem;
+  width: 300px;
 }

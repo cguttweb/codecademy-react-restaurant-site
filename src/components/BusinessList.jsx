@@ -7,7 +7,6 @@ function BusinessList(){
   {/* use map to generate multiple version of business component */}
     <Business />
     <Business />
-    <Business />
   </div>
 
   )

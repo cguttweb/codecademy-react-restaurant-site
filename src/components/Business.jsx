@@ -16,15 +16,15 @@ function Business(){
   return (
     <div>
     <h2>Business Component</h2>
-      <img src='https://via.placeholder.com/400x200' />
-      <p>name</p>
-      <p>address</p>
-      <p>state</p>
-      <p>city</p>
-      <p>zipCode</p>
-      <p>category</p>
-      <p>rating</p>
-      <p>review count</p>
+      <img src={myBusiness.imageSrc} alt={myBusiness.name} />
+      <p>{myBusiness.name}</p>
+      <p>{myBusiness.address}</p>
+      <p>{myBusiness.state}</p>
+      <p>{myBusiness.city}</p>
+      <p>{myBusiness.zipCode}</p>
+      <p>{myBusiness.category}</p>
+      <p>{myBusiness.rating}</p>
+      <p>{myBusiness.reviewCount}</p>
     </div>
   )
 }
