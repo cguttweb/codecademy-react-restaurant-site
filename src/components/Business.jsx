@@ -15,16 +15,16 @@ function Business(){
 
   return (
     <div>
-    <h2>Business Component</h2>
+      <h2>Name: {myBusiness.name}</h2>
       <img src={myBusiness.imageSrc} alt={myBusiness.name} />
-      <p>{myBusiness.name}</p>
-      <p>{myBusiness.address}</p>
-      <p>{myBusiness.state}</p>
-      <p>{myBusiness.city}</p>
-      <p>{myBusiness.zipCode}</p>
-      <p>{myBusiness.category}</p>
-      <p>{myBusiness.rating}</p>
-      <p>{myBusiness.reviewCount}</p>
+      <p>Name: {myBusiness.name}</p>
+      <p>Address: {myBusiness.address}</p>
+      <p>State: {myBusiness.state}</p>
+      <p>City: {myBusiness.city}</p>
+      <p>Zipcode: {myBusiness.zipCode}</p>
+      <p>Category: {myBusiness.category}</p>
+      <p>Rating: {myBusiness.rating}</p>
+      <p>Review Count: {myBusiness.reviewCount}</p>
     </div>
   )
 }
