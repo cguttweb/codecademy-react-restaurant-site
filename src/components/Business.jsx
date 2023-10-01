@@ -1,8 +1,11 @@
 import React from 'react'
+import styles from './Business.module.css'
+
 
 function Business(){
   const myBusiness = {
     imageSrc: 'https://content.codecademy.com/programs/react/ravenous/pizza.jpg',
+    imgWidth: '300',
     name: 'Mama\'s Italian',
     address: '101 New York Way',
     city: 'New York',
@@ -15,7 +18,7 @@ function Business(){
 
   return (
     <div>
-      <h2>Name: {myBusiness.name}</h2>
+      <h2>{myBusiness.name}</h2>
       <img src={myBusiness.imageSrc} alt={myBusiness.name} />
       <p>Name: {myBusiness.name}</p>
       <p>Address: {myBusiness.address}</p>
