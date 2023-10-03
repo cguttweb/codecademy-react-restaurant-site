@@ -1,5 +1,4 @@
 .filterNav {
-  border-bottom: 1px solid #ffffff;
   display: flex;
   justify-content: space-evenly;
   list-style: none;
@@ -10,6 +9,7 @@
 }
 
 .filterNav a {
+  border-bottom: 1px solid #ffffff;
   color: #ffffff;
 }
 
@@ -22,10 +22,11 @@
 
 form {
   display: flex;
-  justify-content: space-around;
+  justify-content: center;
 }
 
 .search {
+  margin: 0 1rem;
   padding: 0.5rem;
-  width: 300px;
+  width: 25%;
 }

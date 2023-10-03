@@ -1,33 +1,19 @@
 import React from 'react'
 import styles from './Business.module.css'
 
-
-function Business(){
-  const myBusiness = {
-    imageSrc: 'https://content.codecademy.com/programs/react/ravenous/pizza.jpg',
-    imgWidth: '300',
-    name: 'Mama\'s Italian',
-    address: '101 New York Way',
-    city: 'New York',
-    state: 'NY',
-    zipCode: '11111',
-    category: 'Italian',
-    rating: 4.3,
-    reviewCount: 40
-  }
+const Business = (prop) => {
 
   return (
     <div>
-      <h2>{myBusiness.name}</h2>
-      <img src={myBusiness.imageSrc} alt={myBusiness.name} />
-      <p>Name: {myBusiness.name}</p>
-      <p>Address: {myBusiness.address}</p>
-      <p>State: {myBusiness.state}</p>
-      <p>City: {myBusiness.city}</p>
-      <p>Zipcode: {myBusiness.zipCode}</p>
-      <p>Category: {myBusiness.category}</p>
-      <p>Rating: {myBusiness.rating}</p>
-      <p>Review Count: {myBusiness.reviewCount}</p>
+      <h2>{prop.name}</h2>
+      <img src={prop.imageSrc} alt={prop.name} />
+      <p>Address: {prop.address}</p>
+      <p>State: {prop.state}</p>
+      <p>City: {prop.city}</p>
+      <p>Zipcode: {prop.zipCode}</p>
+      <p>Category: {prop.category}</p>
+      <p>Rating: {prop.rating}</p>
+      <p>Review Count: {prop.reviewCount}</p>
     </div>
   )
 }
