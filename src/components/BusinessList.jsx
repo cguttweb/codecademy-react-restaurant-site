@@ -10,6 +10,7 @@ const BusinessList = () => {
   {/* use map? to generate multiple version of business component */}
 
   {myBusinesses.map(business => {
+
     return <Business 
       name={business.name} 
       img={business.imageSrc}
