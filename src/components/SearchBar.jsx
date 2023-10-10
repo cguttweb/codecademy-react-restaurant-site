@@ -1,20 +1,33 @@
-import React from 'react'
+import React, { useState } from 'react'
 import styles from './searchBar.module.css'
 
-function searchBar(){
+const searchBar = () => {
+  const [searchTerm, setSearchTerm] = useState('')
+  const [location, setLocation] = useState('')
+  const [sort, setSort] = useState('')
+
+  function handleClickSort(e){
+    setSort(e.target.innerText)
+    console.log('sort option clicked', sort)
+  }
+
+  function handleClickSearch(e) {
+    console.log(`Searching yelp with ${searchTerm} ${location} ${sort}`);
+  }
+
   return (
     <div>
       <div>
         <ul className={styles.filterNav}>
-          <li><a href="#">Best Match</a></li>
-          <li><a href="#">Highest Rated</a></li>
-          <li><a href="#">Most Reviewed</a></li>
+          <li><a href="#" onChange={e => setSort(e.target.textContent)} onClick={handleClickSort}>Best Match</a></li>
+          <li><a href="#" onClick={handleClickSort}>Highest Rated</a></li>
+          <li><a href="#" onClick={handleClickSort}>Most Reviewed</a></li>
         </ul>
       </div>
       <form action='#'>
-        <input className={styles.search} type='text' name='search' id='search' placeholder='Search Businesses' />
-        <input className={styles.search} type='text' name='location' id='location' placeholder='Where?' />
-
+        <input className={styles.search} type='text' name='search' id='search' placeholder='Search Businesses' value={searchTerm} onChange={e => setSearchTerm(e.target.value)}/>
+        <input className={styles.search} type='text' name='location' id='location' placeholder='Where?' value={location} onChange={e => setLocation(e.target.value)} />  
+        <input className={styles.search} type="submit" value="Let's Go" onClick={handleClickSearch} />
       </form>
     </div>
   )
