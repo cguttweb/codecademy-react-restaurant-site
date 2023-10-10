@@ -7,11 +7,11 @@ const searchBar = () => {
   const [sort, setSort] = useState('')
 
   function handleClickSort(e){
-    setSort(e.target.innerText)
-    console.log('sort option clicked', sort)
+    setSort(e.target.textContent)
   }
 
   function handleClickSearch(e) {
+    e.preventDefault()
     console.log(`Searching yelp with ${searchTerm} ${location} ${sort}`);
   }
 
@@ -19,7 +19,7 @@ const searchBar = () => {
     <div>
       <div>
         <ul className={styles.filterNav}>
-          <li><a href="#" onChange={e => setSort(e.target.textContent)} onClick={handleClickSort}>Best Match</a></li>
+          <li><a href="#" onClick={handleClickSort}>Best Match</a></li>
           <li><a href="#" onClick={handleClickSort}>Highest Rated</a></li>
           <li><a href="#" onClick={handleClickSort}>Most Reviewed</a></li>
         </ul>
